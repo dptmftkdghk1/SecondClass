@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul.menu {
+  list-style: none;
+  padding-bottom: 2rem;
+}
+
+li.menu {
+  padding-right: 2rem;
+  float:left;
+}
+
+.container {
+  float: none;
+}
+
+table{
+  border: 1px solid #303030;
+  margin-top: 1rem;
+}
+th, td {
+  border: 1px solid #303030;
+}

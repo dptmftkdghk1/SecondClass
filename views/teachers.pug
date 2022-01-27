@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  input(type='text' id='teacherId')
+  input(type='text' id='name')
+  input(type='password' id='password')
+  button(id='add') Add
+
+  table 
+    thead
+      tr 
+        td teacherId 
+        td name 
+        td delete 
+    tbody
+      if teachers
+        each t in teachers 
+          tr 
+            td=t.teacherId  
+            td=t.name 
+            td  
+              button(class='delete' id=t.teacherId) Delete

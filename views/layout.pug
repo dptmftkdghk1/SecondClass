@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js'
+      integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4='
+      crossorigin='anonymous')
+  body
+    ul(class='menu')
+      li(class='menu')
+        a(href='/') HOME
+      li(class='menu')
+        a(href='/lectures') LECTURES 
+      li(class='menu')
+        a(href='/teachers') TEACHERS 
+      li(class='menu')
+        a(href='/students') STUDENTS 
+      li(class='menu')
+        a(href='/auth/signin') SIGNIN
+      li(class='menu')
+        a(href='/auth/signout') SIGNOUT
+    br
+    div(class='container')
+      block content

@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  input(type='text' id='lectureId')
+  input(type='text' id='title')
+  input(type='text' id='maxStudent')
+  input(type='text' id='teacherId')
+  button(id='add') Add
+  
+  table
+    thead
+      tr 
+        th 강의번호 
+        th 제목
+        th 수강인원/최대인원 
+        th 선생님(이름)
+        th 
+        th
+    tbody
+      if lectures
+        each l in lectures
+          tr 
+            td=l.lectureId  
+            td=l.title
+            td #{l.enrolled} / #{l.maxStudent}
+            td #{l.teacherId} ( #{l.name} )
+            td
+              a(href=`/lectures/${l.lectureId}`) 자세히
+            td  
+              button(class='delete' id=l.lectureId) Delete

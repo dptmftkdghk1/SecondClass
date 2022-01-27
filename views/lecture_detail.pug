@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  if lecture
+    h1 #{lecture.lectureId} - #{lecture.title}
+    if students 
+      h3 수강생 ( #{lecture.enrolled} 명)
+      ol 
+        each s in students 
+          li #{s.studentId} ( #{s.name} )
